@@ -1,3 +1,33 @@
+/* Single-line Footer Layout */
+.footer-content.single-line-footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 1.2rem;
+  flex-wrap: nowrap;
+  font-size: 0.98rem;
+  color: var(--text-secondary);
+  padding: 0;
+}
+.footer-content.single-line-footer span {
+  white-space: nowrap;
+  color: var(--text-secondary);
+  margin: 0 0.18rem;
+  font-size: 0.98rem;
+}
+
+@media (max-width: 700px) {
+  .footer-content.single-line-footer {
+    flex-direction: column;
+    gap: 0.2rem;
+    font-size: 0.95rem;
+  }
+  .footer-content.single-line-footer span {
+    margin: 0;
+    font-size: 0.95rem;
+  }
+}
 /* Add missing CSS variables */
 :root {
   --container-max-width: 1200px;

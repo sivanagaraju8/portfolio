@@ -1,3 +1,13 @@
+// Page Visits Counter (localStorage demo)
+document.addEventListener('DOMContentLoaded', function () {
+    const visitCountSpan = document.getElementById('visitCount');
+    if (visitCountSpan) {
+        let visits = localStorage.getItem('pageVisits');
+        visits = visits ? parseInt(visits, 10) + 1 : 1;
+        localStorage.setItem('pageVisits', visits);
+        visitCountSpan.textContent = visits;
+    }
+});
 // Mobile Navigation Toggle
 const navToggle = document.querySelector('.nav-toggle');
 const navMenu = document.querySelector('.nav-menu');
@@ -381,6 +391,6 @@ if (!document.querySelector('link[rel="icon"]')) {
     const favicon = document.createElement('link');
     favicon.rel = 'icon';
     favicon.type = 'image/svg+xml';
-    favicon.href = 'data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><text y=".9em" font-size="90">💻</text></svg>';
+    favicon.href = 'data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><text y=".9em" font-size="90">👨🏻‍💻</text></svg>';
     document.head.appendChild(favicon);
 }
